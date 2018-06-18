@@ -1,0 +1,37 @@
+<ion-menu side="right" [content]="content">
+
+    <ion-content padding class="back-ground">
+            <ion-list>
+              <ion-item menuClose detail-none>Close Menu</ion-item>
+              <ion-item  detail-none (click)="logout()">logout</ion-item>
+            </ion-list>
+    </ion-content>
+    
+    </ion-menu>
+<ion-nav #content></ion-nav>
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      Welcome {{user.name}}
+    </ion-title>
+    <ion-buttons style="background:#f53d3d;font-size: 20px;font-weight: bolder;color:black" end>
+        <button ion-button menuToggle>
+      <!--  <button clear  style="background:#f53d3d;font-size: 20px;font-weight: bolder" (click)="logout()"> 
+            <ion-icon name="log-out"></ion-icon> -->
+            <ion-icon name="settings"></ion-icon>
+          </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="back-ground" padding>
+
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>  
+  </ion-list>
+
+</ion-content>

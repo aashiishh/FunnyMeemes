@@ -1,0 +1,101 @@
+
+ <ion-content class="back-ground">
+
+    <h1>
+        Funny Meemes
+      </h1>
+
+ <ion-card id="card1">
+      <ion-card-header>
+       SIGN UP
+      </ion-card-header>
+      <ion-card-content>
+
+          <ion-list no-lines>
+
+              <ion-item>
+                  <ion-label floating color="labelcol">Name</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.name" name="name" required></ion-input>
+                </ion-item>
+              <ion-item>
+                  <ion-label floating color="labelcol">Email</ion-label>
+                  <ion-input type="email" [(ngModel)]="user.email" name="email" required></ion-input>
+                </ion-item>
+                <ion-item>
+                <ion-label floating color="labelcol">Password</ion-label>
+                  <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>
+                </ion-item>
+                <div no-padding class="button-style bgg" *ngIf="user.email && user.password">
+                <button ion-button color="danger" block outline large round (click)="signup(user)">Sign Up</button>
+                </div>
+                <div no-padding class="button-style bgg" *ngIf="!user.email || !user.password">
+                    <button ion-button color="danger" class="no-bottom-margin top-margin-8 button-lfg" block outline large round (click)="blankField()" id="loginbutt">Sign Up</button>
+                    </div>
+
+          </ion-list>
+         <!-- <div class="item-center button-style"> -->  
+            <ion-grid>
+              <ion-row>
+                <ion-col col-8 style="padding: 20px 0px 0px 0px" >
+                    <span  style="font-size: 15px;color: rgb(10, 63, 209)"> Already have an account?</span>
+                </ion-col>
+                  <ion-col col-2 no-padding text-start>
+                      <button  ion-button color="secondary" clear large  (click)="goforSignIn()" icon-left icon-only><ion-icon no-padding name="log-in"></ion-icon></button>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+     <!--   </div>  -->
+          </ion-card-content>
+</ion-card>
+
+</ion-content>
+<!--
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Welcome to Funny Meemes</ion-title>
+    <ion-buttons style="background:#5ceebd;font-size: 20px;font-weight: bolder" end>
+        Sign In
+        <button clear  style="background:#5ceebd;font-size: 20px;font-weight: bolder" (click)="goforSignIn()">
+             <ion-icon  name="arrow-dropright-circle"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="back-ground">
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>Full Name</ion-label>
+            <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+          </ion-item>
+
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+      
+      </ion-list>
+          
+          <div padding *ngIf="user.email && user.name && user.password">
+            <button ion-button class="font-15" block color="secondary" (click)="signup(user)">Sign Up</button>
+          </div>
+
+          <div class="item-center no-uppercase" padding *ngIf="!user.email || !user.name || !user.password">
+              <button ion-button class="font-20"  clear color="danger" (click)="blankField()"><u>Sign Up Now</u></button>
+            </div>
+
+  
+
+</ion-content>
+
+-->

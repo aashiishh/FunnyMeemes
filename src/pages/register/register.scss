@@ -1,0 +1,99 @@
+page-register {
+
+
+    h1{
+        color: #fff;
+        font-size: 3em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: lighter;
+      }
+      
+    .item-center
+    {
+        text-align: center;
+    }
+
+    .item
+    {
+      background: rgba( 232, 230, 230, 0px);
+    }
+
+    .button-style button
+    {
+       
+      text-transform: none;
+          
+    }
+
+    ion-card.card{
+        background: rgba( 232, 230, 230, 0.6px);
+        border-radius: 10px;
+      }
+
+      #card1 {
+        border: 0.5px solid;
+        padding: 3px;
+        box-shadow: 5px 10px rgb(181, 141, 199);
+    }
+
+      div button
+      {
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      ion-input
+      {
+          border-bottom: #fd4d73 solid 1px;
+      }
+
+      .scroll-content
+    {
+      text-align: center;
+    }
+
+    #accbutt:hover , #accbutt:focus
+    {
+      
+       
+        color: rgb(122, 17, 17);
+      
+    }
+
+    
+    .button-lfg {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 17px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid white;
+      box-shadow: 0 4px #131616;
+    }
+    
+   // .button-lfg:hover {}
+    
+    .button-lfg:active {
+      box-shadow: 0 2px rgb(252, 252, 252);
+      transform: translateY(4px);
+    }
+
+    .button-lin
+    {
+      color: green;
+    }
+    .button-lin:active {
+      color:wheat;
+      transform: translateY(4px);
+    }
+
+
+    .bgg button
+    {
+      background-color:#554f52;
+    }
+
+
+
+}

@@ -1,0 +1,121 @@
+<ion-content class="back-ground">
+
+  <h1>
+    Funny Meemes
+  </h1>
+
+
+  <ion-card id="card1">
+    <ion-card-header>
+      LOGIN
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating color="labelcol">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="user.email" name="email" required></ion-input>
+        </ion-item>
+        <ion-item>
+        <ion-label floating color="labelcol">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>
+        </ion-item>
+        <div no-padding class="button-style bgg" *ngIf="user.email && user.password">
+        <button ion-button  class="button-lfg" block outline large round  (click)="goforlogin(user)" ><ion-icon name="mail"></ion-icon>Login</button>
+        </div>
+        <div no-padding class="button-style bgg" *ngIf="!user.email || !user.password">
+            <button ion-button class="button-lfg" icon-left  block outline large round (click)="blankField()" ><ion-icon name="mail"></ion-icon>Login</button>
+            </div>
+            <div class="button-style font-size-15" no-padding>
+                <ion-grid no-padding class="no-item-margin" >
+                  <ion-row >
+                      <ion-col style="padding: 7px 0px 0px 0px" text-end>
+                          <span  style="font-size: 12px;color: rgb(245, 12, 12)">forgot password?</span>
+                      </ion-col>
+                        <ion-col  no-padding text-start>
+                            <button  ion-button color="goodblue" clear small style="font-size: 12px" (click)="forgotPass()" icon-only><u>Get Here</u></button>
+                        </ion-col>
+                  <!--  <ion-col no-padding>
+                      <button class="no-item-margin" style="font-size: 16px"  ion-button color="danger" id="forgetbutt" clear small item-start (click)="forgotPass()"><u>forgot password?</u></button></ion-col>
+                  --> </ion-row>
+                      <ion-row>
+                      <ion-col  no-padding>
+                      <button class="no-item-margin newuser-font" small style="font-size: 15px"  ion-button color="goodblue" icon-right clear id="newubutt"  (click)="register()"><u>New User?</u><ion-icon style="padding: 0px 0px 0px 5px"  name="person-add"><u></u></ion-icon></button></ion-col>
+                    </ion-row>
+                </ion-grid>
+                  </div>
+      </ion-list>
+      <b>OR</b> 
+      <button class="button-lfg" ion-button full large round ion-left color="primary" icon-left (click)="facebookLogin()" >
+        <ion-icon name="logo-facebook"></ion-icon>
+        <div id="div1">Login with Facebook</div>
+      </button>
+      <button class="button-lfg" ion-button large full round ion-left color="danger" icon-left (click)="googleLogin()" >
+          <ion-icon name="logo-google"></ion-icon>
+          <div id="div1">Login with Google</div>
+        </button>   
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+
+
+
+<!--<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Welcome to Funny Meemes</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+      
+       
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="text" [(ngModel)]="user.email" name="email" required></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>
+              </ion-item>
+
+              <div padding *ngIf="user.email && user.password">
+                  <button class="font-15 font-bold"   ion-button block (click)="goforlogin(user)">Submit</button>
+                </div>
+    
+                <div padding class="item-center" *ngIf="!user.email || !user.password">
+                  <button class="font-20 no-uppercase font-bold" color="danger" ion-button clear (click)="blankField()"><u>Submit Now</u></button>
+                </div>
+                <div class="button-style margin-div font-size-15" no-padding>
+                <ion-grid >
+                  <ion-row>
+                    <ion-col no-padding>
+                      <button class="button-style" clear small item-start ion-button color="danger" (click)="forgotPass()"><u>forgot password?</u></button></ion-col>
+                    <ion-col no-padding text-end>
+                      <button class="button-style" clear small  item-end ion-button color="secondary" (click)="register()" ><u>New User?</u></button></ion-col>
+                    </ion-row>
+                </ion-grid>
+                  </div>
+
+
+                  <div class="item-center margin-top-bot">
+                      <button class="loginBtn loginBtn--google" (click)="googleLogin()">Login with Google</button>
+                  </div>
+  
+                <div class="item-center margin-top-bot">
+                <button class="loginBtn loginBtn--facebook" (click)="facebookLogin()">Login with Facebook</button>
+                </div>
+
+                
+              
+</ion-content>
+
+-->
