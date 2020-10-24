@@ -28,7 +28,8 @@ user = {} as  User;
     'Hollywood',
     'South Indian Movies',
     'Phones',
-    'Kids'
+    'Kids',
+    'Movies'
   ];
 
   itemSelected(item: string) {
